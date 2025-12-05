@@ -16,16 +16,14 @@ export default function NewSongs() {
 
   useEffect(() => {
     const fetchSongs = async () => {
-      // mentre aspetto la fetch
-      setIsLoading(true) // attivo il loading
-      setIsError(false) // resetto eventuali errori
-      // Eseguo la fetch sull'url base + la parola di ricerca che ho scelto
+      setIsLoading(true)
+      setIsError(false)
       try {
         const res = await fetch(baseUrlSearch + "abba")
         if (!res.ok) throw new Error("Errore nella risposta")
 
         const data = await res.json()
-        setSongs(data.data.slice(0, 6)) // prendo le prime 6 canzoni
+        setSongs(data.data.slice(0, 10)) // prendo le prime 10 canzoni
       } catch (error) {
         console.log(error)
         setIsError(true)
@@ -44,9 +42,10 @@ export default function NewSongs() {
       <h1 className="text-white">
         Nuove uscite <FontAwesomeIcon icon={faAngleRight} />
       </h1>
-      <Row className="g-3">
+      {/* Su schermi piccoli ci sono 3 colonne per riga e da schermi medi in poi ci sono 5 colonne */}
+      <Row className="g-3 row-cols-3 row-cols-md-5">
         {songs.map((song) => (
-          <Col xs={12} sm={4} lg={2} key={song.id}>
+          <Col key={song.id}>
             <MusicCards
               cover={song.album.cover_medium}
               title={song.title}

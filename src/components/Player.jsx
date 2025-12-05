@@ -19,7 +19,7 @@ const Player = () => {
       {/* PLAYER PICCOLO */}
       <Container
         fluid
-        className="d-md-none w-75 bg-dark position-fixed bottom-0 start-50 translate-middle-x rounded-4"
+        className="d-md-none w-75 bg-dark position-fixed bottom-0 start-50 translate-middle-x rounded-4 z-3"
       >
         <Row className="d-flex justify-content-between p-3">
           <Col xs="auto">
