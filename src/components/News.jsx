@@ -17,7 +17,11 @@ function News() {
           </h2>
 
           <div className="mt-auto">
-            <img src={img1a} alt="immagine 1" className="img-fluid rounded-3" />
+            <img
+              src={img1a}
+              alt="immagine 1"
+              className="img-fluid rounded-3 img-hover"
+            />
           </div>
         </Col>
 
@@ -26,7 +30,11 @@ function News() {
           <p className="small-text m-0">NUOVA STAZIONE RADIO</p>
           <h2 className="fs-6">Ecco la nuova casa della musica latina</h2>
           <div className="mt-auto">
-            <img src={img1b} alt="immagine 2" className="img-fluid rounded-3" />
+            <img
+              src={img1b}
+              alt="immagine 2"
+              className="img-fluid rounded-3 img-hover"
+            />
           </div>
         </Col>
       </Row>
