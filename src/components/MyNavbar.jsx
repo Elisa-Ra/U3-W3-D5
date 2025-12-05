@@ -9,7 +9,12 @@ import {
 } from "react-bootstrap"
 import appleLogo from "../assets/logos/music.svg"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faSearch, faHome } from "@fortawesome/free-solid-svg-icons"
+import {
+  faSearch,
+  faHome,
+  faThLarge,
+  faRss,
+} from "@fortawesome/free-solid-svg-icons"
 
 function MyNavbar() {
   return (
@@ -84,7 +89,7 @@ function MyNavbar() {
                 />
               </InputGroup>
 
-              <Nav.Link href="#" className="text-white">
+              <Nav.Link href="#" className="text-white p-0">
                 <FontAwesomeIcon
                   icon={faHome}
                   size="sm"
@@ -92,10 +97,20 @@ function MyNavbar() {
                 />{" "}
                 Home
               </Nav.Link>
-              <Nav.Link href="#" className="text-white">
+              <Nav.Link href="#" className="text-white p-0">
+                <FontAwesomeIcon
+                  icon={faThLarge}
+                  size="sm"
+                  className="text-danger"
+                />{" "}
                 Novità
               </Nav.Link>
-              <Nav.Link href="#" className="text-white">
+              <Nav.Link href="#" className="text-white p-0">
+                <FontAwesomeIcon
+                  icon={faRss}
+                  size="sm"
+                  className="text-danger"
+                />{" "}
                 Radio
               </Nav.Link>
             </Nav>

@@ -13,24 +13,38 @@ import { Row, Col } from "react-bootstrap"
 function App() {
   return (
     <>
-      <Row>
-        <Col
-          md={2}
-          className="bg-dark text-white h-100 position-fixed top-0 start-0 p-3"
-          style={{ minHeight: "100vh" }}
-        >
-          <MyNavbar />
-        </Col>
+      {/* Layout per schermi medi e grandi */}
+      <div className="d-none d-md-block">
+        <Row>
+          <Col
+            md={2}
+            className="bg-dark text-white h-100 position-fixed top-0 start-0 p-3"
+            style={{ minHeight: "100vh" }}
+          >
+            <MyNavbar />
+          </Col>
 
-        <Col md={{ span: 10, offset: 2 }} className="p-3">
-          <Player />
-          <News />
-          <Radio />
-          <NewSongs />
-          <Others />
-          <MyFooter />
-        </Col>
-      </Row>
+          <Col md={{ span: 10, offset: 2 }} className="p-3">
+            <Player />
+            <News />
+            <Radio />
+            <NewSongs />
+            <Others />
+            <MyFooter />
+          </Col>
+        </Row>
+      </div>
+
+      {/* Layout per schermi piccoli */}
+      <div className="d-md-none">
+        <MyNavbar />
+        <Player />
+        <News />
+        <Radio />
+        <NewSongs />
+        <Others />
+        <MyFooter />
+      </div>
     </>
   )
 }
