@@ -1,40 +1,61 @@
 import Container from "react-bootstrap/Container"
+import Row from "react-bootstrap/Row"
+import Col from "react-bootstrap/Col"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
-import NavDropdown from "react-bootstrap/NavDropdown"
+import appleLogo from "../assets/logos/music.svg"
 
 function MyNavbar() {
   return (
-    <Navbar expand="lg" bg="dark" data-bs-theme="dark">
-      <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <>
+      {/* NAVBAR PER MOBILE */}
+      <Navbar
+        expand="lg"
+        className="navbar-color d-md-none"
+        data-bs-theme="dark"
+      >
+        <Container fluid>
+          <Row className="w-100 align-items-center">
+            {/* Colonna sinistra toggle */}
+            <Col xs={4} className="text-start">
+              <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                className="border-0"
+              >
+                <i className="bi bi-list text-danger fs-3"></i>
+              </Navbar.Toggle>
+            </Col>
+
+            {/* Colonna centralelogo */}
+            <Col xs={4} className="text-center">
+              <Navbar.Brand href="#home">
+                <img src={appleLogo} alt="apple-logo" className="logo-white" />
+              </Navbar.Brand>
+            </Col>
+
+            {/* Colonna destra*/}
+            <Col xs={4} className="text-end">
+              <Nav>
+                <Nav.Link href="#" className="text-danger">
+                  Accedi
+                </Nav.Link>
+              </Nav>
+            </Col>
+          </Row>
+
+          {/* Collapse con i link del menu */}
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="#novita">Novità</Nav.Link>
+              <Nav.Link href="#radio">Radio</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
+      {/* NAVBAR PER SCHERMI MEDI */}
+    </>
   )
 }
 
 export default MyNavbar
-
-// PLAYER:
-{
-  /* <i class="bi bi-play-fill"></i>
-<i class="bi bi-stop-fill"></i> */
-}

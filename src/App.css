@@ -1,0 +1,16 @@
+/* Per togliere la freccetta del dropdown che react-bootstrap aggiunge di default */
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.navbar-color {
+  background-color: #373c41 !important;
+}
+/* Filtro per rendere l'svg bianco */
+.logo-white {
+  filter: brightness(0) invert(1);
+}
+
+.small-text {
+  font-size: 0.7rem;
+}
