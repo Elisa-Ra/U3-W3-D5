@@ -70,7 +70,7 @@ function MyNavbar() {
         <Row>
           <Col
             md={2} // larghezza colonna (2/12)
-            className="navbar-color text-white h-100 position-fixed top-0 start-0 d-flex flex-column p-3"
+            className="bg-dark text-white h-100 position-fixed top-0 start-0 d-flex flex-column p-3"
             style={{ minHeight: "100vh" }} // assicura altezza piena viewport
           >
             <Navbar.Brand href="#" className="mb-4 text-start">
