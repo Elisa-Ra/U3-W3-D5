@@ -18,36 +18,60 @@ function Radio() {
       <Row className="g-3">
         {/* Prima colonna */}
         <Col xs={12} sm={4} md={2} className="text-start d-flex flex-column">
-          <img src={img2a} alt="immagine 1" className="img-fluid rounded-3" />
+          <img
+            src={img2a}
+            alt="immagine 1"
+            className="img-fluid rounded-3 img-hover"
+          />
           <p className="small-text m-0">Prologo con Abuelo</p>
         </Col>
 
         {/* Seconda colonna */}
         <Col xs={12} sm={4} md={2} className="text-start d-flex flex-column">
-          <img src={img2b} alt="immagine 2" className="img-fluid rounded-3" />
+          <img
+            src={img2b}
+            alt="immagine 2"
+            className="img-fluid rounded-3 img-hover"
+          />
           <p className="small-text m-0">The Wanderer</p>
         </Col>
 
         {/* Terza colonna */}
         <Col xs={12} sm={4} md={2} className="text-start d-flex flex-column">
-          <img src={img2c} alt="immagine 3" className="img-fluid rounded-3" />
+          <img
+            src={img2c}
+            alt="immagine 3"
+            className="img-fluid rounded-3 img-hover"
+          />
           <p className="small-text m-0">Michael Bublé e Carly Pearce</p>
         </Col>
 
         {/* Quarta colonna  */}
         <Col xs={12} md={2} className="d-none d-md-flex text-start flex-column">
-          <img src={img2d} alt="immagine 4" className="img-fluid rounded-3" />
+          <img
+            src={img2d}
+            alt="immagine 4"
+            className="img-fluid rounded-3 img-hover"
+          />
           <p className="small-text m-0">Michael Bublé e Carly Pearce</p>
         </Col>
 
         {/* Quinta colonna  */}
         <Col xs={12} md={2} className="d-none d-md-flex text-start flex-column">
-          <img src={img2e} alt="immagine 5" className="img-fluid rounded-3" />
+          <img
+            src={img2e}
+            alt="immagine 5"
+            className="img-fluid rounded-3 img-hover"
+          />
           <p className="small-text m-0">Michael Bublé e Carly Pearce</p>
         </Col>
         {/* Sesta colonna  */}
         <Col xs={12} md={2} className="d-none d-md-flex text-start flex-column">
-          <img src={img2f} alt="immagine 6" className="img-fluid rounded-3" />
+          <img
+            src={img2f}
+            alt="immagine 6"
+            className="img-fluid rounded-3 img-hover"
+          />
           <p className="small-text m-0">Non si vede nel mockup ma esiste</p>
         </Col>
       </Row>
