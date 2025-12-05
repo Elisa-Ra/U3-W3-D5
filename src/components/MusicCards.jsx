@@ -6,7 +6,11 @@ export default function MusicCards({ cover, title, artist }) {
   return (
     <Container fluid className="text-center">
       <div className="mt-auto">
-        <img src={cover} alt={title} className="img-fluid rounded-3" />
+        <img
+          src={cover}
+          alt={title}
+          className="img-fluid rounded-3 img-hover"
+        />
       </div>
       <Container
         fluid
